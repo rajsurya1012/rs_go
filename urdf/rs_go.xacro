@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <robot name="rs_go" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find rs_go_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find rs_go_description)/urdf/rs_go.trans" />
-<xacro:include filename="$(find rs_go_description)/urdf/rs_go.gazebo" />
+<xacro:include filename="$(find rs_go)/urdf/materials.xacro" />
+<xacro:include filename="$(find rs_go)/urdf/rs_go.trans" />
+<xacro:include filename="$(find rs_go)/urdf/rs_go.gazebo" />
 <link name="base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.125 0.2576675591905234 0.14581411451370685"/>
@@ -13,14 +13,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://rs_go_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://rs_go/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="rs_color"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://rs_go_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://rs_go/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -34,14 +34,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0 -0.1 -0.05"/>
     <geometry>
-      <mesh filename="package://rs_go_description/meshes/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://rs_go/meshes/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 -0.1 -0.05"/>
     <geometry>
-      <mesh filename="package://rs_go_description/meshes/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://rs_go/meshes/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -55,14 +55,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0 -0.4 -0.05"/>
     <geometry>
-      <mesh filename="package://rs_go_description/meshes/back_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://rs_go/meshes/back_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 -0.4 -0.05"/>
     <geometry>
-      <mesh filename="package://rs_go_description/meshes/back_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://rs_go/meshes/back_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -76,14 +76,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.25 -0.1 -0.05"/>
     <geometry>
-      <mesh filename="package://rs_go_description/meshes/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://rs_go/meshes/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.25 -0.1 -0.05"/>
     <geometry>
-      <mesh filename="package://rs_go_description/meshes/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://rs_go/meshes/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -97,14 +97,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.25 -0.4 -0.05"/>
     <geometry>
-      <mesh filename="package://rs_go_description/meshes/back_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://rs_go/meshes/back_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.25 -0.4 -0.05"/>
     <geometry>
-      <mesh filename="package://rs_go_description/meshes/back_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://rs_go/meshes/back_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>

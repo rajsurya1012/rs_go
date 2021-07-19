@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>rs_go_description</name>
+  <name>rs_go</name>
   <version>0.0.0</version>
-<description>The rs_go_description package</description>
+<description>The rs_go package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->

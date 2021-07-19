@@ -14,7 +14,7 @@ def callback_laser(msg):
 
 def main():
     rospy.init_node('laser_readings')
-    sub=rospy.Subscriber("/rs_go_description/laser/scan", LaserScan, callback_laser)
+    sub=rospy.Subscriber("/rs_go/laser/scan", LaserScan, callback_laser)
     rospy.spin()
 
 if __name__=='__main__':
