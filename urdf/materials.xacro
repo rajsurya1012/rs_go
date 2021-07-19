@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<robot name="rs_go" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<material name="silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material>
+
+<material name="rs_color">
+  <color rgba="0.200 0.300 0.900 1.000"/>
+</material>
+
+<material name="black">
+  <color rgba="0.100 0.100 0.100 1.000"/>
+</material>
+
+</robot>
