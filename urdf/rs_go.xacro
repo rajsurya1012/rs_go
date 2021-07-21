@@ -162,7 +162,7 @@
 </joint>
 
 <joint name="sensor_laser_joint" type="fixed">
-  <origin xyz="-0.125 0.15 0.30" rpy="0.0 0.0 0.0"/>
+  <origin xyz="-0.125 0.15 0.30" rpy="0.0 0.0 -1.570796"/>
   <parent link="base_link"/>
   <child link="sensor_laser"/>
   
