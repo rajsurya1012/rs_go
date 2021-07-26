@@ -1,0 +1,21 @@
+<launch>
+  <arg name="scan_topic"  default="/rs_go/laser/scan" />
+  <arg name="base_frame"  default="base_link"/>
+  <arg name="odom_frame"  default="odom"/>
+  
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"></node>
+  
+  <node pkg="rviz" type="rviz" name="rviz"></node>
+
+  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+    <param name="base_frame" value="$(arg base_frame)"/>
+    <param name="odom_frame" value="$(arg odom_frame)"/>
+  
+    <param name="xmin" value="-100.0"/>
+    <param name="ymin" value="-100.0"/>
+    <param name="xmax" value="100.0"/>
+    <param name="ymax" value="100.0"/>
+
+    <remap from="scan" to="$(arg scan_topic)"/>
+  </node>
+</launch>
