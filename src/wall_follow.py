@@ -5,7 +5,7 @@ from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from tf import transformations
-
+from std_srvs.srv import *
 import math
 
 pub_ = None
@@ -22,6 +22,14 @@ state_dict_ = {
     1: 'turn left',
     2: 'follow the wall',
 }
+
+def wall_follower_switch(req):
+    global active_
+    active_ = req.data
+    res = SetBoolResponse()
+    res.success = True
+    res.message = 'Done!'
+    return res
 
 def clbk_laser(msg):
     global regions_

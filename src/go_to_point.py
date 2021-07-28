@@ -5,14 +5,19 @@ from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist, Point
 from nav_msgs.msg import Odometry
 from tf import transformations
-
+from std_srvs.srv import *
 import math
 
-position_ = Point()
+active_ = False
+
 yaw_ = 0
 
 state_ = 0
-
+position_ = Point()
+desired_position_ = Point()
+desired_position_.x = rospy.get_param('des_pos_x')
+desired_position_.y = rospy.get_param('des_pos_y')
+desired_position_.z = 0
 
 
 yaw_precision_ = math.pi / 90 
@@ -21,6 +26,13 @@ dist_precision_ = 0.3
 
 pub = None
 
+def go_to_point_switch(req):
+    global active_
+    active_ = req.data
+    res = SetBoolResponse()
+    res.success = True
+    res.message = 'Done!'
+    return res
 
 def clbk_odom(msg):
     global position_
@@ -95,10 +107,6 @@ def main():
     
     rate = rospy.Rate(20)
 
-    desired_position_ = Point()
-    desired_position_.x = -3
-    desired_position_.y = 7
-    desired_position_.z = 0
     while not rospy.is_shutdown():
         if state_ == 0:
             fix_yaw(desired_position_)
