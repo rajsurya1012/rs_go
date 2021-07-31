@@ -1,6 +1,7 @@
 <launch>
-  <arg name="world" default="world1"/>
+  <arg name="world" default="myworld"/>
   <param command="$(find xacro)/xacro $(find rs_go)/urdf/rs_go.xacro" name="robot_description"/>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
   <node args="-param robot_description -urdf -model rs_go" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find rs_go)/worlds/$(arg world).world"/>
