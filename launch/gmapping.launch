@@ -2,7 +2,7 @@
   <arg name="scan_topic"  default="/rs_go/laser/scan" />
   <arg name="base_frame"  default="base_link"/>
   <arg name="odom_frame"  default="odom"/>
-  
+   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
   <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"></node>
   
   <node pkg="rviz" type="rviz" name="rviz"></node>
