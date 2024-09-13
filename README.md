@@ -4,11 +4,16 @@
 
 ## Overview
 
-This repository contains a simulation of a 4-wheeled robot designed using Fusion 360 and controlled via ROS (Robot Operating System). It serves as a test platform for learning and experimenting with various robotics concepts, including control systems, SLAM for mapping and localization, and autonomous navigation.
+This repository contains a simulation of a 4-wheeled robot designed using Fusion 360 and controlled via ROS (Robot Operating System). This project was a crucial part of my early undergraduate years, serving as a test platform for learning and experimenting with various robotics concepts, including control systems, SLAM for mapping and localization, and autonomous navigation.
+
+## Robot Design
+
+![Robot Design](https://github.com/rajsurya1012/rs_go/raw/main/rs_go.png)
+
+The robot is designed in Fusion 360 and features a differential drive system, allowing for precise movement and control. It is equipped with mounts for LIDAR and camera sensors, essential for navigation and environment perception.
 
 ## Features
 
-- **Fusion 360 Model:** A custom-designed 4-wheeled robot with differential drive capabilities.
 - **Differential Drive Control:** Enables precise movement of the robot through speed variations of individual wheels.
 - **SLAM Integration:**
   - **GMapping:** For creating maps of the environment.
@@ -20,28 +25,15 @@ This repository contains a simulation of a 4-wheeled robot designed using Fusion
   - **Bug0 Algorithm:** Simple obstacle avoidance strategy.
   - **Wall Following Algorithm:** Maintains a constant distance from walls for navigation in constrained environments.
 
-## Components
+## Autonomous Navigation
 
-### Robot Design
+The robot's autonomous navigation capabilities are visualized in the following map:
 
-- Developed in Fusion 360, the robot model includes:
-  - Four wheels for differential drive
-  - Mounts for LIDAR and camera sensors
+![Autonomous Navigation Map](https://github.com/rajsurya1012/rs_go/raw/main/map/navigation.png)
 
-### Control and Navigation
+## Learning and Exploration
 
-- **Differential Drive System:** Allows the robot to maneuver by adjusting wheel speeds.
-- **SLAM (Simultaneous Localization and Mapping):** Utilizes GMapping and AMCL to create and navigate maps of the environment, enabling autonomous operation.
-
-### Sensor Integration
-
-- **LIDAR:** Provides real-time obstacle detection and distance measurement.
-- **Camera:** Captures visual data for processing and navigation.
-
-### Algorithms
-
-- **Bug0 Algorithm:** Implements basic obstacle avoidance by following a path and navigating around obstacles.
-- **Wall Following Algorithm:** Enables navigation by maintaining a set distance from walls. Experimented with autonomous mapping using wall following algorihtm.
+This project was instrumental in my journey of learning ROS and exploring robotics. It provided hands-on experience with designing, controlling, and navigating a robot in a simulated environment, laying the foundation for more advanced projects in the future.
 
 ## Getting Started
 
